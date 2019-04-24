@@ -1,6 +1,6 @@
 # Reports
 
-Reports is a simple node.js web application to view our departments repository of custom reports developed for the Accela Civic Platform by the iTeam. We found this app was necessary because we were constantly This app connects to a MySQL database of reports published to the Accela Civic Platform report server that is available to staff to run at anytime.
+Reports is a simple node.js web application to view our departments repository of custom reports developed for the Accela Civic Platform by the iTeam. We found this app was necessary because we were constantly being asked to build a report for staff that were already available. This app connects to a MySQL database of reports published to the Accela Civic Platform report server that is available to staff to run at anytime.
 
 ![](./reports.png)
 
