@@ -1,0 +1,56 @@
+/* Header Sizing */
+header {
+  display:flex;
+
+  #header-logo {
+    order:1;
+    flex-basis:15%;
+  }
+
+  #header-search {
+    order:2;
+    flex-basis:55%;
+  }
+
+  #header-icons {
+    order:3;
+    flex-basis:30%;
+  }
+}
+
+/* Page Sizing */
+#flex-container {
+  display:flex;
+
+  #nav-menu {
+    order:1;
+    flex-basis:15%;
+  }
+
+  #table-container {
+    order:2;
+    flex-basis:55%;
+  }
+
+  #report-info-container {
+    order:3;
+    flex-basis:30%;
+  }
+}
+
+/* Report Panel Sizing */
+#report-information {
+  display:flex;
+  width:80%;
+  margin:auto auto;
+
+  #report-labels {
+    order:1;
+    flex-basis:40%;
+  }
+
+  #report-data {
+    order:2;
+    flex-basis:68%;
+  }
+}

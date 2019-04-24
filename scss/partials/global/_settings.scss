@@ -1,0 +1,24 @@
+@font-face {
+  font-family:$global-font;
+}
+
+html, body {
+  overflow:hidden;
+}
+
+body {
+  width:100%;
+  min-height:100vh;
+  position:relative;
+  margin:0;
+  font-family:$global-font;
+  font-family:sans-serif;
+}
+
+.haha {
+  -webkit-transform : rotate(180deg);
+  -moz-transform : rotate(180deg);
+  -ms-transform : rotate(180deg);
+  transform : rotate(180deg);
+  margin-top: -60px; 
+}

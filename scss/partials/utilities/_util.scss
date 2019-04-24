@@ -1,0 +1,23 @@
+.font-light {color:$black-light;}
+
+.b-no-bot{
+  border:$border-gray;
+  border-bottom:0;
+}
+
+.gray-underline {
+  border-bottom:$border-gray;
+}
+
+.gray-topline {
+  border-top:$border-gray;
+}
+
+.active-tab {
+  border-width:2px !important;
+  border-color:$dark-blue !important;
+}
+
+.required-field::placeholder {
+  color:$vib-purple !important;
+}

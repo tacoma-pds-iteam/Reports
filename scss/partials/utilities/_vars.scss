@@ -1,0 +1,28 @@
+// $global-font : Poppins, Roboto, Arial, sans-serif;
+// $global-font : OpenSans-Regular;
+$global-font:Helvetica, Verdana, sans-serif;
+
+/* Colors */
+// $dark-blue : #2A353B;
+$dark-blue:rgb(29,39,49);
+$bright-orange:rgb(255,116,0);
+$dark-orange:rgb(169,77,0);
+$lighten-blue:rgb(46,64,81);
+$pure-white:rgb(255,255,255);
+
+$pure-black:rgb(0,0,0);
+$vib-purple:rgb(127,0,255);
+$light-purple:rgb(196,156,237);
+
+$gray:rgb(204,204,204);
+$table-gray:rgb(245,245,245);
+$midtone-gray:rgb(219,219,214);
+
+$black-light:rgb(85,85,85);
+$dark-gray:rgb(128,128,128);
+
+/* Borders */
+$border-gray:1px $gray solid;
+$border-white:1px $pure-white solid;
+$border-dblue:1px $dark-blue solid;
+$border-black:1px $pure-black solid;

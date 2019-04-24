@@ -1,0 +1,206 @@
+.hide-modal {
+  display:none;
+}
+
+#modal-container {
+  position:fixed;
+  z-index:1;
+  width:100%;
+  height:100%;
+  left:0;
+  top:0;
+  overflow:auto;
+  background-color:rgba(0,0,0,0.4);
+
+  #new-report-modal {
+      color:$dark-gray;
+      width:350px;
+      margin:auto;
+      margin-top:20px;
+      padding:0px 20px 20px;
+      border:$border-gray;
+      background-color:$pure-white;
+      border-radius:5px;
+
+      #modal-header {
+          background:$dark-blue;
+          color:$pure-white;
+          padding:20px;
+          font-weight:normal;
+          border-radius:5px;
+          text-align:center;
+
+          .report-modal {
+              float:right;
+
+              &:hover {
+                  color:$vib-purple;
+              }
+          }
+      }
+
+      input {
+        &[type="text"] {
+            font-size:16px;
+            box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            width:98%;
+            padding:7px;
+            margin-left:5px;
+            border:none;
+            border-bottom:$border-gray;
+            margin-bottom:10px;
+
+            &:focus {
+              outline:none !important;
+              border:1px solid $dark-blue;
+              box-shadow: 0 0 2px $vib-purple;
+            }
+
+            &::placeholder {
+              font-size:15px;
+              color:$dark-gray;
+              // text-align:center;
+            }
+          }
+
+        &[type="button"] {
+          background-color:$dark-blue;
+          border:none;
+          color:$pure-white;
+          font-size:16px;
+          padding:8px 18px;
+          text-decoration:none;
+          margin:auto auto;
+
+          &:hover {
+            background-color:$vib-purple;
+          }
+        }
+      }
+
+
+      /* Override Styles */
+      #new-name {
+        width:74%;
+      }
+
+      #new-version {
+        text-align:center;
+        width:20%;
+      }
+
+      #new-reqdate, #new-pubdate {
+        width:47%;
+      }
+
+      .param-input, .param-desc-input {
+        width:42% !important;
+      }
+
+      #new-param-button {
+        background:none;
+        border:none;
+        font-size:16px;
+        outline:none;
+
+        &:hover {
+          color:$vib-purple;
+        }
+      }
+
+      #modal-submit {
+        text-align:center;
+      }
+    
+      #modal-exports {
+        text-align:center;
+        padding:5px;
+
+        .export-choice {
+          width:80px;
+          margin-left:5px;
+          border:none;
+          background:none;
+          border:$border-gray;
+          padding:5px;
+          border-radius:3px;
+          color:$dark-gray;
+
+          &:focus {
+            outline: none !important;
+          }
+        }
+
+        .selected-choice {
+          background:$dark-blue;
+          color:$pure-white;
+          font-weight:bold;
+        }
+
+        .container {
+            position: relative;
+            padding:5px;
+            cursor: pointer;
+            margin-left:20px;
+
+            input {
+            position:absolute;
+            opacity:0;
+            cursor:pointer;
+            }
+            border:$border-gray;
+            border-radius:5px;
+            display: inline-block;
+        }
+
+
+        /* Create a custom checkbox */
+        .checkmark {
+            position: relative;
+            // top:0;
+            // left:0;
+            min-height:25px;
+            min-width:25px;
+            // background-color:$gray;
+            border:$border-gray;
+            border-radius:5px;
+            padding: 5px;
+          }
+        }
+      
+      #text-area {
+        width:94%;
+        margin:auto auto;
+
+        textarea {
+          resize:none;
+          font-size:16px;
+          font-family:$global-font;
+          width:100%;
+          height:60px;
+          border:$border-gray;
+          border-radius:5px;
+          padding:5px;
+          margin:auto auto;
+          margin-top:10px;
+  
+          &:focus {
+            outline: none !important;
+            border:1px solid $dark-blue;
+            box-shadow: 0 0 2px $vib-purple;
+          }
+        }
+      }
+
+      .name-2, .name-3, .name-4, .name-5 {
+        display:none;
+      }
+
+      .desc-2, .desc-3, .desc-4, .desc-5 {
+        display:none;
+      }
+      
+  }
+}

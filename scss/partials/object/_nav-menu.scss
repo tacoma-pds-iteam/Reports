@@ -1,0 +1,38 @@
+#nav-menu {
+  border-right:$border-gray;
+  background-color:$table-gray;
+  color:$pure-black;
+  font-size:18px;
+
+  #menu-choices {
+    margin-top:25px;
+
+    .menu-option {
+      padding:10px;
+
+      &:hover {
+        background:linear-gradient(to left,$table-gray, $midtone-gray);
+      }
+
+      p {
+        width:80%;
+        margin:auto auto;
+      }
+    }
+  }
+
+  #app-info {
+    font-size:14px;
+    font-style:italic;
+    position:absolute;
+    bottom:0;
+    margin-bottom:62px;
+    text-align:center;
+    width:15%;
+  }
+
+  .easter-egg {
+    color: $vib-purple;
+    cursor: pointer;
+  }
+}

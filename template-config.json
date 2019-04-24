@@ -1,0 +1,8 @@
+{
+	"port": "<Your URL port>",
+	"url": "<Your URL here>",
+	"db-name": "<Your database name>",
+	"db-host": "<Your database hostname>",
+	"db-user": "<Your database username>",
+	"db-password": "<Your database password>"
+}

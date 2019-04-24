@@ -1,0 +1,157 @@
+<!DOCTYPE HTML>
+<!-- ################# Reports #################
+	A applicaiton for storing and adding reports.
+	Created by: Nathan Connors & Casey Jamrog
+	Planning & Development Services
+	Last update: 04.24.19
+-->
+<html lang="en">
+<head>
+	<title>Reports</title>
+	<link href="https://use.fontawesome.com/releases/v5.0.7/css/all.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+
+<body>
+	<header id="page-header">
+		<div id="header-logo" class="reload-page">
+			<i class="fas fa-clipboard-list" aria-hidden="true"></i>Reports
+		</div>
+		<div id="header-search">
+			<form onSubmit="return false;">
+				<input class="search-text" type="text" placeholder="Search...">
+				<!-- <button class="global-search" type="button"><i class="fas fa-search"></i></button> -->
+			</form>
+		</div>
+		<div id="header-icons">
+			<span><a href="http://pds/" target="_blank"><i class="fas fa-rocket"></i>Launchpad</a></span>
+			<span class='report-modal'><i class="fas fa-plus"></i>New Report</span>
+		</div>
+	</header>
+	<article id="modal-container" class="hide-modal">
+		<div id="new-report-modal">
+			<h2 id="modal-header">Create New Report<i class="fas fa-times report-modal"></i></h2>
+			<input type="text" id="new-name" placeholder="Report Name" />
+			<input type="text" id="new-version" placeholder="Version" />
+			<input type="text" id="new-reqdate" placeholder="Requested Date" />
+			<input type="text" id="new-pubdate" placeholder="Published Date" />
+			<input type="text" id="new-requester" placeholder="Requester" />
+			<div id="modal-categories">
+				<input type="text" id="new-category" placeholder="Category" />
+			</div>
+			<!-- <input type="text" id="new-exports" placeholder="Export Types" /> -->
+			<input type="text" id="new-fields" placeholder="Fields" />
+			<input type="text" id="new-filters" placeholder="Filters" />
+			<input type="text" id="new-link" placeholder="Direct Link" />
+			<div id="modal-exports">
+				<span>Exports:</span>
+				<button class="export-choice">CSV</button>
+				<button class="export-choice">Excel</button>
+				<button class="export-choice">PDF</button>
+			</div>
+			<div id="text-area">
+				<textarea id="new-desc" placeholder="Enter Report Description"></textarea>
+			</div>
+			<p>Parameters:</p>
+			<div id="modal-params">
+				<input type="text" class="param-input name-1" placeholder="Name" />
+				<input type="text" class="param-desc-input desc-1" placeholder="Description" />
+
+				<button id="new-param-button"><i id="fa-changer" class="fas fa-plus"></i></button>
+
+				<input type="text" class="param-input name-2" placeholder="Name" />
+				<input type="text" class="param-desc-input desc-2" placeholder="Description" />
+
+				<input type="text" class="param-input name-3" placeholder="Name" />
+				<input type="text" class="param-desc-input desc-3" placeholder="Description" />
+
+				<input type="text" class="param-input name-4" placeholder="Name" />
+				<input type="text" class="param-desc-input desc-4" placeholder="Description" />
+
+				<input type="text" class="param-input name-5" placeholder="Name" />
+				<input type="text" class="param-desc-input desc-5" placeholder="Description" />
+			</div>
+			<div id="modal-submit">
+				<input id="create-rpt-submit" type="button" value="Submit" />
+				<input id="update-rpt-submit" type="button" value="Update" />
+			</div>
+			<!-- <input type="text" id="new-params" placeholder="Parameters (|=separate; :=description)" /> -->
+		</div>
+	</article>
+	<div id="flex-container">
+		<!-- **Start Nav Menu Section** -->
+		<div id="nav-menu">
+			<div id="menu-choices">
+			</div>
+			<span id="app-info">v.2.1 &nbsp;&nbsp; Last Updated: 4/24/2019</span>
+		</div>
+		<!-- **End Nav Menu Section** -->
+
+		<!-- **Start Report Info Container** -->
+		<div id="report-info-container" class="font-light">
+			<!-- Start No Report Placeholder -->
+			<div id="report-placeholder">
+				<h3>Select a report to see the info in this panel.</h3>
+			</div>
+			<!-- End No Report Placeholder -->
+
+			<!-- Start Report Info Main -->
+			<div id="report-info-main">
+				<h2 id='report-info-name'></h2>
+				<div id="report-information">
+					<div id="report-labels">
+						<h3>Published Date:</h3>
+						<h3>Request Date:</h3>
+						<h3>Requester:</h3>
+						<h3>Categories:</h3>
+						<h3>Description:</h3>
+					</div>
+
+					<div id="report-data">
+						<p id="report-publish-date"></p>
+						<p id="report-request-date"></p>
+						<p id="report-requester"></p>
+						<p id="report-categories"></p>
+						<p id="report-description"></p>
+					</div>
+				</div>
+				<div id="report-links"></div>
+
+				<div id="report-adv-info">
+					<p id="report-info-label">
+			      <button class='adv-info-btn active-tab'>
+			        <h3>Parameters</h3>
+			      </button>
+			      <button class='adv-info-btn'>
+			        <h3>Fields</h3>
+			      </button>
+			      <button class='adv-info-btn'>
+			        <h3>Filters</h3>
+			      </button>
+			    </p>
+			    <div id="report-bottom-table">
+			      <table>
+			        <tbody id="report-adv-generation"></tbody>
+			      </table>
+			    </div>
+				</div>
+			</div>
+			<!-- End Reports Information -->
+		<!-- **End Report Info Container** -->
+		</div>
+		<!-- Start Table Section -->
+		<div id="table-container" class="normal">
+			<div id="table-search"></div>
+		  <div id="limiter"></div>
+		</div>
+		</div>
+		<!-- End Table Section-->
+	<script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/es6-shim/0.35.3/es6-shim.min.js"></script>
+	<script async src="https://use.fontawesome.com/620420abf1.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.9.0/jquery.mark.es6.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>
+	<script src="./app.js"></script>
+</body>
+</html>

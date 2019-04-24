@@ -1,0 +1,73 @@
+#table-container {
+  background-color:$pure-white;
+  min-height:94vh;
+  max-height:94vh;
+  // overflow:auto;
+  overflow-y:scroll;
+  width:100%;
+  margin:0 auto;
+  border-right:$border-gray;
+  border-bottom:$border-gray;
+
+  #limiter {
+    width:95%;
+    margin:0 auto;
+
+    #deprecated {
+      display:none;
+    }
+  }
+
+  #table-search {
+    width:95%;
+    margin:0 auto;
+    display:none;
+
+    #search-results-container {
+      width:95%;
+      margin:auto auto;
+      font-size:17px;
+
+      .search-result {
+        width:48%;
+        height:300px;
+        border:$border-gray;
+        border-radius:5px;
+        float:left;
+        margin-left:10px;
+        margin-top:10px;
+
+        .rpt-searcher {
+          display:none;
+        }
+
+        div {
+          padding:5px;
+          padding-left:15px;
+          padding-right:15px;
+        }
+
+        .search-title {
+          font-size:20px;
+          background:$dark-blue;
+          color:$pure-white;
+          padding:10px;
+        }
+      }
+
+    }
+  }
+
+  .table-content {
+    border-radius:10px;
+    border-right:$border-gray;
+    border-left:$border-gray;
+    border-bottom:$border-gray;
+  }
+
+  .table-header {
+    font-size:25px;
+    font-weight:bold;
+    margin-top:20px;
+  }
+}

@@ -1,0 +1,27 @@
+/* Real Scroll Bar */
+.normal::-webkit-scrollbar {
+  width:5px;
+}
+.normal::-webkit-scrollbar-track {
+  background-color:$gray;
+}
+.normal::-webkit-scrollbar-thumb {
+  background:$dark-blue;
+  border-radius:10px;
+}
+
+/* Justin Styles */
+// .haha::-webkit-scrollbar {
+//   width:50px;
+// }
+// .haha::-webkit-scrollbar-track {
+//   background-color:#ccc;
+//   border-right:24px solid #fff;
+//   border-left:24px solid #fff;
+// }
+// .haha::-webkit-scrollbar-thumb {
+//   padding:100px;
+//   background:url("IMG_01432.png");
+//   background-repeat:no-repeat;
+//   background-position:center center;
+// }
